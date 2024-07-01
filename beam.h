@@ -46,27 +46,26 @@ public:
 
 
     /**
-     * Adds a rectangular segment to the beam with the specified width, height, length, and force.
-     *
+     * Adds a rectangular segment to the beam with the specified width, length, formSech, m and moment.
      * @param length the length of the rectangular segment (in meters)
      * @param size the width of the rectangular(had to have a square as a base) segment (in centimeters)
      * @param moment is the moment applied to the rectangular  segment (in Hewton meters(N*m))
      * @param m is the ???(честно говоря, не понимаю, что это) applied to the rectangular segment (in Hewtons)
-     * @param formSech is the proportional form of the rectangular segment h/b(coefficient)
+     * @param formSech(форма сечения) is the proportional form of the rectangular segment h/b(coefficient)
      */
     void AddRectangularSegment( double length, double size, double moment, double m, double formSech );
 
 
     /**
-    * Adds a rectangular segment to the beam with the specified width, height, length, and force.
+    * Adds a pipe segment to the beam with the specified diameter, length, moment, m, and formSech.
     *
-    * @param length the length of the tube-shaped segment (in meters)
-    * @param size the diameter of the tube-shaped segment (in centimeters)
-    * @param moment is the moment applied to the tube-shaped  segment (in Hewton meters(N*m))
-    * @param m is the ???(честно говоря, не понимаю, что это) applied to the tube-shaped segment (in Hewtons)
-    * @param formSech is the proportional form of the tube-shaped segment d/D(coefficient)
+    * @param length the length of the pipe-shaped segment (in meters)
+    * @param size the diameter of the pipe-shaped segment (in centimeters)
+    * @param moment is the moment applied to the pipe-shaped  segment (in Hewton meters(N*m))
+    * @param m is the ???(честно говоря, не понимаю, что это) applied to the pipe-shaped segment (in Hewtons)
+    * @param formSech(форма сечения) is the proportional form of the pipe-shaped segment d/D(coefficient)
     */
-    void AddTubeSegment( double length, double size, double moment, double m, double formSech );
+    void AddPipeSegment( double length, double size, double moment, double m, double formSech );
 
 
     /**
@@ -78,11 +77,11 @@ public:
 
 
     /**
-     * Sets the force applied at the end of the beam.
+     * Sets the moment applied at the end of the beam.
      *
      * @param moment is the moment to be applied at the end of the beam
      */
-    void SetMomentumAtTheEnd( double moment );
+    void SetMomentAtTheEnd( double moment );
 
 
     /**
