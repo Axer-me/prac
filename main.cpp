@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <beam.h>
 
 //Функция определения моментов инерции сечений на участках вала
 double calculate_j(int form, float size, double formSech, double beta )
